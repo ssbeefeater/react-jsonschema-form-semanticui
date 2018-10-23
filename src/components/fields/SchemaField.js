@@ -215,7 +215,9 @@ function SchemaFieldRender(props) {
   const { type } = schema;
   const id = idSchema.$id;
   const label =
-    uiSchema["ui:title"] || props.schema.title || schema.title || name;
+    uiSchema["ui:title"] ||
+    props.schema.title ||
+    (schema.title !== "" && (schema.title || name));
   const description =
     uiSchema["ui:description"] ||
     props.schema.description ||

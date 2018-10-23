@@ -1,6 +1,6 @@
 {
   "name": "react-jsonschema-form-semanticui-fixed",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "A simple React component capable of building HTML forms out of a JSON schema using React Semantic UI.",
   "scripts": {
     "build:readme": "toctoc README.md -w",
@@ -13,7 +13,7 @@
     "lint": "eslint src test playground",
     "precommit": "lint-staged",
     "publish-to-gh-pages": "npm run build:playground && gh-pages --dist build/",
-    "publish-to-npm": "npm run build:readme && npm run dist && npm publish",
+    "publish-to-npm": "npm run build:readme && npm run dist && npm publish --registry https://registry.npmjs.org",
     "start": "node devServer.js",
     "tdd": "cross-env NODE_ENV=test mocha --compilers js:babel-register --watch --require ./test/setup-jsdom.js test/**/*_test.js",
     "test": "cross-env NODE_ENV=test mocha --compilers js:babel-register --require ./test/setup-jsdom.js test/**/*_test.js"
